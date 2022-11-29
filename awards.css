@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Decalotype";
+  src: url("Decalotype-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+* {
+  font-family: Decalotype, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.25rem;
+ }
+
+.red {
+  color: red;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-top: 1px solid black;
+}
+
+label {
+  margin: 4px 4px 4px 0;
+}
+
+input {
+  margin-bottom: 3px;
+}
+
+fieldset > h2 {
+  margin-left: -0.75em;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+textarea {
+  padding: 3px;
+}
+
+img#add, img.subtract {
+  height: 1rem;
+}
+
+#nominator_info {
+  display: grid;
+  grid-template-columns: minmax(0, max-content) auto;
+}
+
+#nominee_info, div#nominees {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 25%)) minmax(min-content, 20%) minmax(min-content, 30%) auto; 
+  grid-gap: 0 10px;
+}
+
+div.instructions {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  margin-left: -0.75em;
+}
+
+span.important {
+  font-weight: 700;
+  color: green;
+}

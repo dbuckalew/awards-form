@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="awards.css" />
+  </head>
+  <body>
+    <div>
+      Use this form to submit requests for Individual Achievement and Service Awards for all divisions of TRMN. All required fields need to be completed. Failure to do so can result in your request being denied or delayed. <span class="red">Please note you need to fill out a separate form for each award nomination.</span>
+    </div>
+    <form>
+      <fieldset id="nominator">
+        <h2>Nominator Information</h2>
+        <div class="instructions">
+          This section is to be filled out by the individual submitting the award request.
+        </div>
+        <div id="nominator_info">
+          <label for="nominator_id">
+            Nominator Member ID
+          </label>
+          <div>
+            <input type="text" id="nominator_id" name="nominator_id" oninput="checkNominatorId()"/>
+          </div>
+          <label for="nominator_name">
+            Nominator Name
+          </label>
+          <div>
+            <input type="text" id="nominator_name" name="nominator_name" disabled />
+          </div>
+          <label for="nominator_branch">
+            Nominator Branch
+          </label>
+          <div>
+            <input type="text" id="nominator_branch" name="nominator_branch" disabled />
+          </div>
+        </div>
+      </fieldset>
+      <fieldset id="nominee">
+        <h2>Nominee Information</h2>
+        <div class="instructions">
+          Nominator please fill this section with information about <span class="important">each</span> individual you for which you are requesting this award for.
+        </div>
+        <div id="nominee_info">
+          <label for="nominee_id">
+            Nominee Member ID
+          </label>
+          <label for="nominee_name">
+            Nominee Name
+          </label>
+          <label for="nominee_branch">
+            Nominee Branch
+          </label>
+          <label for="nominee_award">
+            Award
+          </label>
+          <label for=""></label>
+          <input type="text" id="nominee_id" name="nominee_id" oninput="checkMemberId()"/>
+          <input type="text" id="nominee_name" name="nominee_name" disabled />
+          <input type="text" id="nominee_branch" name="nominee_branch" disabled />
+          <input type="text" id="nominee_award" name="nominee_award" onkeypress="awardInput(event)"/>
+          <div class="plus" onclick="addNominee()">
+            <img id="add" src="add.svg" />
+          </div>
+        </div>
+        <div id="nominees">
+        </div>
+      </fieldset>
+      <fieldset id="award">
+        <h2>Award Information</h2>
+        <div class="instructions">
+          Select the requested award and then fill out the required information.
+        </div>
+        <label for="nomination_text">
+          Nomination Text
+        </label>
+        <textarea id="nomination_text" name="nomination_text" rows="5" cols="40"></textarea>
+      </fieldset>
+      <input type="submit" />
+    </form>
+    <script src="awards.js"></script>
+  </body>
+</html>
